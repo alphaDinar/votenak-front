@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/eb75260fb3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="page">
+    <nav class="top_nav">
+      <a href="index.html" class="material-symbols-outlined"
+        style="font-weight: 600; color: var(--var-theme);">arrow_back</a>
+      <h3>Votenak</h3>
+    </nav>
+
+
+    <form class="vote_box" method="post">
+      <h3>SRC PRESIDENT</h3>
+      <div class="time_box">
+        <span>14</span> : <span>50</span> : <span>34</span>
+      </div>
+
+
+      <section class="can_box swiper">
+        <section class="swiper-wrapper">
+          <div class="swiper-slide">
+            <label>
+              <input type="radio" name="vote" value="ama">
+              <div class="img_box" style="background-image: url(images/ama.jpg);">
+                <p>
+                  <small>Ama</small>
+                  <small>CS 4</small>
+                </p>
+                <div><i class="material-symbols-outlined">verified</i></div>
+              </div>
+            </label>
+          </div>
+          <div class="swiper-slide">
+            <label>
+              <input type="radio" name="vote" value="kofi">
+              <div class="img_box" style="background-image: url(images/face.jpg);">
+                <p>
+                  <small>Kofi</small>
+                  <small>CS 4</small>
+                </p>
+                <div><i class="material-symbols-outlined">verified</i></div>
+              </div>
+            </label>
+          </div>
+        </section>
+      </section>
+
+      <button class="material-symbols-outlined">fingerprint</button>
+
+
+
+      <style>
+        .page {
+          min-height: 90vh;
+          padding: 5vh 0;
+        }
+
+        .top_nav {
+          display: flex;
+          position: fixed;
+          top: 1vh;
+          left: 1vw;
+          align-items: center;
+        }
+
+        .top_nav h3 {
+          font-size: 2rem;
+        }
+
+        .time_box {
+          padding: 5px 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0 0.5rem;
+
+        }
+
+        .time_box span {
+          background: var(--var-theme);
+          padding: 5px 10px;
+          color: white;
+          border-radius: 3px;
+        }
+
+        .vote_box {
+          width: 80%;
+          padding: 2vh 10%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1.5rem 0;
+        }
+
+        .can_box {
+          width: 100%;
+        }
+
+        .can_box section {
+          min-width: 70%;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 4rem 2rem;
+          justify-content: space-around;
+
+        }
+
+        .vote_box .img_box {
+          width: 320px;
+          height: 420px;
+          background-image: url(images/face.avif);
+          background-position: center;
+          background-size: cover;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          cursor: pointer;
+          align-items: flex-end;
+        }
+
+        .vote_box .img_box p {
+          width: 100%;
+          background: var(--var-theme);
+          color: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 5px 0;
+          position: absolute;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          right: -20px;
+          bottom: -20px;
+        }
+
+        .vote_box .img_box p small:nth-child(1) {
+          font-size: 2rem;
+        }
+
+        .vote_box .img_box p small:nth-child(2) {
+          font-size: 1rem;
+        }
+
+        .vote_box .img_box div {
+          width: 100%;
+          position: absolute;
+          background: rgba(0, 0, 0, 0.523);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .vote_box .img_box div i {
+          font-size: 4rem;
+          color: springgreen;
+        }
+
+
+        label>input {
+          display: none;
+        }
+
+        label>input+.img_box div {
+          height: 0;
+          transition: 0.4s ease;
+        }
+
+        label>input+.img_box div i {
+          visibility: hidden;
+        }
+
+        label>input:checked+.img_box div {
+          height: 100%;
+        }
+
+        label>input:checked+.img_box div i {
+          visibility: visible;
+        }
+
+        .vote_box button {
+          padding: 10px;
+          background: var(--var-theme);
+          color: springgreen;
+          font-weight: 600;
+          width: 100px;
+          cursor: pointer;
+          margin-top: 5vh;
+          border-radius: 100px;
+          font-size: 2rem;
+        }
+
+
+
+        @media all and (max-width:1000px) {
+          .top_nav {
+            width: 90%;
+            padding: 2vh 5%;
+            gap: 2rem;
+          }
+
+          .top_nav h3 {
+            font-size: 1.2rem;
+            font-weight: 400;
+          }
+
+          .vote_box {
+            overflow: hidden;
+            width: 90%;
+            gap: 2rem 0;
+            padding: 5% 2vh;
+          }
+
+          .vote_box h3 {
+            font-size: 1.5rem;
+            font-family: 'Alegreya Sans SC', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+          }
+
+          .can_box {
+            width: 90%;
+            max-width: 90%;
+            display: flex;
+          }
+
+          .can_box section {
+            flex-wrap: revert;
+            gap: revert;
+            justify-content: revert;
+          }
+
+          .vote_box .img_box {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            justify-content: flex-start;
+          }
+
+          .vote_box .img_box div {
+            border-radius: 10px;
+          }
+
+          .vote_box .img_box p {
+            background: rgba(255, 255, 255, 0.715);
+            display: flex;
+            position: revert;
+            padding: 8px;
+            border-radius: 0 0 0 5px;
+            border-radius: 0 10px 0 10px;
+            flex-direction: column;
+            z-index: 10;
+            width: auto;
+            color: black;
+          }
+
+          .vote_box .img_box p small:nth-child(1) {
+            font-size: 1.2rem;
+          }
+
+          .vote_box .img_box p small:nth-child(2) {
+            font-size: 1rem;
+          }
+
+          label>input+.img_box div {
+            height: 0;
+            transition: 0.4s ease;
+          }
+
+          label>input+.img_box div i {
+            visibility: hidden;
+          }
+
+          label>input:checked+.img_box div {
+            height: 100%;
+          }
+
+          label>input:checked+.img_box div i {
+            visibility: visible;
+          }
+
+          .vote_box button {
+            margin-top: revert;
+          }
+        }
+      </style>
+
+      <script>
+        const can_box = document.querySelector('.can_box')
+        const can_box_wrapper = document.querySelector('.can_box .swiper-wrapper')
+        const can_box_slides = document.querySelectorAll('.can_box .swiper-slide')
+
+        if (window.innerWidth < 1000) {
+          const can_swiper = new Swiper('.can_box', {
+            effect: 'cards',
+            speed: 500
+          })
+        } else {
+          can_box.classList.remove('swiper')
+          can_box_wrapper.classList.remove('swiper-wrapper')
+          can_box_slides.forEach((slide,i) => {
+            slide.classList.remove('swiper-slide')
+            anime({
+              targets : slide,
+              opacity : [0,1],
+              delay : i * 100,
+              translateY : [-50, 0]
+            })
+          })
+        }
+      </script>
+
+    </form>
+
+  </section>
+
+
+
+</body>
+
+</html>
