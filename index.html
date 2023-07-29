@@ -36,7 +36,7 @@
       }else{
         anime({
           targets : '.top_box',
-          height : [0, '20vh'],
+          height : [0, '25vh'],
           opacity : [0,1],
         })
       }
@@ -127,7 +127,8 @@
           }
           .top_box{
             width: 100%;
-            min-height: 25vh;
+            min-height: auto;
+            height: 20vh;
           }
           .top_box #logo{
             top: revert;
@@ -144,7 +145,7 @@
     <style>
       @media all and (max-width:700px) {
         .top_box {
-          height: 20vh;
+          height: 25vh;
           border-radius: 0 0 300px 300px;
         }
         .top_box #logo {
