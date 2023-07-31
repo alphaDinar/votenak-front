@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/eb75260fb3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="css/component.css">
+  <link rel="stylesheet" href="css/edit_category.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="page">
+    <section class="prompt_box">
+      <span>Are you sure you want to delete</span>
+      <i class="res">ball</i>
+      <nav>
+        <button>Yes</button>
+        <button>No</button>
+      </nav>
+    </section>
+
+    <nav class="top_nav">
+      <a href="election_panel.html" class="material-symbols-outlined"
+        style="font-weight: 600; color: var(--var-theme);">arrow_back</a>
+      <h3>Votenak</h3>
+    </nav>
+
+    <section class="vote_box" method="post">
+      <form method="post">
+        <input type="text" value="SRC President">
+        <button class="material-symbols-outlined">save</button>
+      </form>
+
+      <section class="can_box">
+        <section>
+          <div class="can">
+            <nav>
+              <button class="material-symbols-outlined">save</button>
+              <button class="material-symbols-outlined">delete</button>
+            </nav>
+            <div class="img_box" style="background-image: url(images/ama.jpg);">
+              <p>
+                <input name="text" value="Ama">
+                <input name="text" value="CSS 4">
+              </p>
+            </div>
+          </div>
+
+          <script>
+            for (var i = 0; i < 4; i++) {
+              document.querySelector('.can_box section').appendChild(document.querySelector('.can').cloneNode(true))
+            }
+          </script>
+
+          <div class="can">
+            <nav>
+              <button class="material-symbols-outlined">edit</button>
+              <button class="material-symbols-outlined" onclick="deleteCan()">delete</button>
+            </nav>
+            <div class="img_box" style="background-image: url(images/face.jpg);">
+              <p>
+                <small>Kofi</small>
+                <small>CS 4</small>
+              </p>
+            </div>
+          </div>
+
+          <a href="add_candidate.html" class="can material-symbols-outlined add_student">
+            add
+          </a>
+        </section>
+      </section>
+
+      <script>
+        const prompt_box = document.querySelector('.prompt_box')
+
+        const deleteCan = () => {
+          prompt_box.classList.add('change')
+
+          prompt_box.onclick = (e) => {
+            if (e.target.innerHTML === 'Yes') {
+              console.log(e.target)
+            } else if (e.target.innerHTML === 'No') {
+              prompt_box.classList.remove('change')
+            }
+          }
+        }
+
+        document.querySelectorAll('.can').forEach((el, i) => {
+          anime({
+            targets: el,
+            opacity: [0, 1],
+            delay: i * 100,
+            translateY: [-50, 0]
+          })
+        })
+      </script>
+
+      <style>
+        .page {
+          min-height: 90vh;
+          padding: 5vh 0;
+        }
+      </style>
+
+      </form>
+
+    </section>
+
+
+
+</body>
+
+</html>

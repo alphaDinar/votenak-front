@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/component.css">
+  <link rel="stylesheet" href="css/student_list.css">
+</head>
+
+<body>
+  <section class="page">
+    <nav class="top_nav">
+      <a href="dashboard.html" class="material-symbols-outlined"
+        style="font-weight: 600; color: var(--var-theme);">arrow_back</a>
+      <h3>Dashboard</h3>
+    </nav>
+    <section class="student_box">
+      <header>
+        <span>Student List</span>
+        <input type="text" placeholder="Search Student">
+        <select>
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+      </header>
+
+      <table>
+        <tbody>
+          <tr>
+            <th>Index No.</th>
+            <th>Passcode</th>
+            <th>status</th>
+          </tr>
+          <tr data-index="0000">
+            <td>0000</td>
+            <td>11111</td>
+            <td>active</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <a href="add_student.html" class="material-symbols-outlined add_student">add</a>
+    </section>
+  </section>
+</body>
+
+</html>

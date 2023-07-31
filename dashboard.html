@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/component.css">
+  <style>
+    .page {
+      width: 90%;
+      min-height: 90vh;
+      padding: 5vh 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="page">
+    <nav class="top_nav">
+      <a href="index.html" class="material-symbols-outlined"
+        style="font-weight: 600; color: var(--var-theme);">arrow_back</a>
+      <h3>Votenak</h3>
+    </nav>
+
+    <header>St. Pauls Election </header>
+    <section class="menu_box">
+      <a href="election_panel.html"> <i class="material-symbols-outlined">how_to_vote</i> <span>Election Panel</span>
+        <small></small></a>
+      <a href="add_student.html"> <i class="material-symbols-outlined">school</i> <span>New Student</span>
+        <small></small></a>
+      <a href="students.html"> <i class="material-symbols-outlined">menu_book</i> <span>Students</span>
+        <small></small></a>
+      <a href="resullts.html"><i class="material-symbols-outlined">ballot</i> <span>Election Results</span>
+        <small></small> </a>
+    </section>
+
+    <script>
+      document.querySelectorAll('.menu_box a').forEach((el, i) => {
+        anime({
+          targets: el,
+          opacity: [0, 1],
+          rotate: [30, 0],
+          delay: 100 * i
+        })
+      })
+    </script>
+  </section>
+</body>
+
+</html>

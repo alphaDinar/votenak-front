@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="css/component.css">
+  <link rel="stylesheet" href="css/category.css">
+</head>
+
+<body>
+  <section class="page">
+    <section class="prompt_box">
+      <span>Are you sure you want to delete</span>
+      <i class="res">ball</i>
+      <nav>
+        <button>Yes</button>
+        <button>No</button>
+      </nav>
+    </section>
+
+    <nav class="top_nav">
+      <a href="dashboard.html" class="material-symbols-outlined"
+        style="font-weight: 600; color: var(--var-theme);">arrow_back</a>
+      <h3>Dashboard</h3>
+    </nav>
+
+    <section class="category_box">
+      <header>
+        <h3>Categories</h3>
+        <input type="text" placeholder="Search Candidate" oninput="searchCategory(event.target.value.toLowerCase())">
+        <small>|</small>
+        <i class="material-symbols-outlined">edit</i>
+      </header>
+
+
+      <section class="categories">
+        <div href="" class="category" data-name="SRC President">
+          <strong>SRC President</strong>
+          <span><i class="material-symbols-outlined">person</i> 4</span>
+          <hr style="width: 50%; border-top: 2px solid var(--var-theme);">
+          <nav>
+            <a href="edit_category.html" class="material-symbols-outlined">edit</a>
+            <i class="material-symbols-outlined" onclick="deleteCat()">delete</i>
+          </nav>
+        </div>
+
+        <a href="add_category.html" id="add_category" class="category material-symbols-outlined"
+          data-name="SRC President">
+          add
+        </a>
+
+        <script>
+          for (var i = 0; i < 4; i++) {
+            document.querySelector('.categories').appendChild(document.querySelector('.category').cloneNode(true))
+          }
+        </script>
+      </section>
+    </section>
+  </section>
+  <script src="js/category.js"></script>
+  <script>
+    const prompt_box = document.querySelector('.prompt_box')
+
+    const deleteCat = () => {
+      prompt_box.classList.add('change')
+
+      prompt_box.onclick = (e) => {
+        if (e.target.innerHTML === 'Yes') {
+          console.log(e.target)
+        } else if (e.target.innerHTML === 'No') {
+          prompt_box.classList.remove('change')
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

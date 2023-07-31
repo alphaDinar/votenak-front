@@ -1,0 +1,40 @@
+form{
+  gap: 1rem;
+}
+form , form div{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+}
+form small{
+  color: salmon;
+  width: 350px;
+  background: rgb(247, 232, 231);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.page{
+  width: 90%;
+  min-height: 90vh;
+  padding: 5vh 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img_box{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+@media all and (max-width:700px){
+  form small{
+    text-align: center;
+    width: 90%;
+  }
+}

@@ -1,0 +1,61 @@
+.student_box {
+  width: 80%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem 0;
+  padding: 10vh 5%;
+}
+
+.student_box header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0 2rem;
+  align-items: center;
+  font-size: 2rem;
+  padding: 5px 0;
+  border-bottom: 2px solid var(--var-theme);
+}
+.add_student {
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+table {
+  border-spacing: 0 1vw;
+}
+
+th {
+  background: var(--var-theme);
+  color: white;
+}
+
+th,
+td {
+  padding: 1vw 2vw;
+  text-align: center;
+}
+
+td {
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--var-theme);
+}
+
+.student_box header input {
+  padding: 5px;
+  border-bottom: 1px solid darkgray;
+}
+@media all and (max-width:600px) {
+  table {
+    width: 100%;
+  }
+
+  .student_box header {
+    gap: 1rem 0;
+    align-items: center;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="css/component.css">
+  <link rel="stylesheet" href="css/get_result.css">
+</head>
+
+<body>
+  <section class="page">
+    <nav class="top_nav">
+      <a href="resullts.html" class="material-symbols-outlined"
+        style="font-weight: 600; color: var(--var-theme);">arrow_back</a>
+      <h3>Category Results</h3>
+    </nav>
+
+    <section class="result_box">
+      <header>
+        <span>SRC President Results</span>
+        <i style="font-style: normal;">|</i>
+        <small>400 votes</small>
+      </header>
+
+      <section class="results">
+        <div class="result">
+          <div class="img_box" style="background-image: url(images/face2.jpg);"></div>
+          <div class="con">
+            <span>Frank Osei</span>
+            <hr style="width: 100%; border-top: 2px solid var(--var-theme);">
+            <span>400</span>
+          </div>
+          <p>
+            1st
+          </p>
+        </div>
+      </section>
+
+      <script>
+        for (var i = 0; i < 4; i++) {
+          document.querySelector('.results').appendChild(document.querySelector('.result').cloneNode(true))
+        }
+      </script>
+    </section>
+  </section>
+  <script>
+    document.querySelectorAll('.result').forEach((el, i) => {
+      anime({
+        targets: el,
+        translateY: [-50, 0],
+        opacity: [0, 1],
+        delay: i * 100
+      })
+    })
+  </script>
+</body>
+
+</html>
