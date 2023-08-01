@@ -27,42 +27,24 @@
 
     <section class="result_box">
       <header>
-        <span>SRC President Results</span>
-        <i style="font-style: normal;">|</i>
-        <small>400 votes</small>
+        <h3>SRC President - 500 votes</h3>
       </header>
 
       <section class="results">
-        <div class="result">
-          <div class="img_box" style="background-image: url(images/face2.jpg);"></div>
-          <div class="con">
-            <span>Frank Osei</span>
-            <hr style="width: 100%; border-top: 2px solid var(--var-theme);">
-            <span>400</span>
-          </div>
+        <div class="result" style="background-image: url(images/face2.jpg);">
+          <span class="pos">1st</span>
           <p>
-            1st
+            <span>Frank Osei</span>
+
+            <span>500 <small style="font-size: 0.8rem; font-weight: 400;">votes</small> </span>
           </p>
         </div>
       </section>
-
-      <script>
-        for (var i = 0; i < 4; i++) {
-          document.querySelector('.results').appendChild(document.querySelector('.result').cloneNode(true))
-        }
-      </script>
     </section>
   </section>
-  <script>
-    document.querySelectorAll('.result').forEach((el, i) => {
-      anime({
-        targets: el,
-        translateY: [-50, 0],
-        opacity: [0, 1],
-        delay: i * 100
-      })
-    })
-  </script>
+
+
+
 </body>
 
 </html>

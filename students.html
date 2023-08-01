@@ -32,20 +32,67 @@
         </select>
       </header>
 
-      <table>
-        <tbody>
-          <tr>
-            <th>Index No.</th>
-            <th>Passcode</th>
-            <th>status</th>
-          </tr>
-          <tr data-index="0000">
-            <td>0000</td>
-            <td>11111</td>
-            <td>active</td>
-          </tr>
-        </tbody>
-      </table>
+      <section class="table_box">
+        <table>
+          <tbody>
+            <tr>
+              <th>Index No.</th>
+              <th>Passcode</th>
+              <th>status</th>
+            </tr>
+            <tr data-index="0000">
+              <td>0000</td>
+              <td>11111</td>
+              <td>active</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <tbody>
+            <tr>
+              <th>Index No.</th>
+              <th>Passcode</th>
+              <th>status</th>
+            </tr>
+            <tr data-index="0000">
+              <td>0000</td>
+              <td>11111</td>
+              <td>active</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <tbody>
+            <tr>
+              <th>Index No.</th>
+              <th>Passcode</th>
+              <th>status</th>
+            </tr>
+            <tr data-index="0000">
+              <td>0000</td>
+              <td>11111</td>
+              <td>active</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <style>
+        .table_box{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          flex-wrap: wrap;
+          gap: 0 2rem;
+          justify-content: space-around;
+        }
+        @media all and (max-width:1100px){
+          .table_box{
+            display: flex;
+            justify-content: space-around;
+          }
+        }
+      </style>
+      
 
       <a href="add_student.html" class="material-symbols-outlined add_student">add</a>
     </section>

@@ -13,6 +13,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/component.css">
+  <link rel="stylesheet" href="css/vote_box.css">
   <title>Document</title>
 
 </head>
@@ -74,120 +75,12 @@
           </form>
         </div>
       </div>
-
-
-
-      <style>
-        form{
-          margin: 5vh 0;
-          min-height: 30vh;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        form button{
-          padding: 10px 15px;
-          width: 100px;
-          background: var(--var-theme);
-          color: springgreen;
-          cursor: pointer;
-          border-radius: 40px;
-        }
-        .swiper-slide section {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 2rem;
-        }
-
-        .swiper-slide section h3 {
-          font-size: 2.4rem;
-        }
-
-        .can_box {
-          flex-wrap: wrap;
-          gap: 2rem;
-          justify-content: space-around;
-          display: flex;
-          width: 100%;
-        }
-
-        .can {
-          width: 300px;
-        }
-
-        label {
-          display: flex;
-          flex-direction: column;
-          cursor: pointer;
-          overflow: hidden;
-          position: relative;
-          border: 1px solid darkgray;
-        }
-
-
-        .can p {
-          display: flex;
-          gap: 0.5rem;
-          font-size: 1.3rem;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .cover {
-          width: 100%;
-          font-size: 4rem;
-          color: springgreen;
-          top: -100%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background: rgba(0, 0, 0, 0.409);
-          position: absolute;
-          transition: 0.4s ease;
-        }
-
-        label>input {
-          display: none;
-        }
-
-        label>input:checked+.cover {
-          top: 0;
-        }
-
-        .img_box {
-          width: 100%;
-          height: 350px;
-          background-position: center;
-          background-size: cover;
-        }
-      </style>
-
     </section>
-    <button class="next_slide" type="button">Next</button>
 
-
-
-
-    <style>
-      .next_slide {
-        background: var(--var-theme);
-        color: springgreen;
-        font-size: 1.2rem;
-        cursor: pointer;
-        margin: 1vh 0;
-        border-radius: 3px;
-        padding: 8px 20px;
-      }
-
-      @media all and (max-width:500px) {
-        .next_slide {
-          display: none;
-        }
-      }
-    </style>
+    <nav>
+      <button class="prev_slide material-symbols-outlined" type="button">chevron_left</button>
+      <button class="next_slide material-symbols-outlined" type="button">chevron_right</button>
+    </nav>
 
     <script>
       for (var i = 0; i < 1; i++) {
@@ -198,15 +91,22 @@
       var category_swiper = new Swiper('.vote_box', {
         loop: false,
         navigation: {
-          nextEl: '.next_slide'
+          nextEl: '.next_slide',
+          prevEl: '.prev_slide'
         }
       })
 
       category_swiper.on('slideChange', () => {
-        console.log('changed')
         if (category_swiper.isEnd) {
           document.querySelector('.next_slide').style.display = 'none'
-          console.log('Last slide is reached!');
+          document.querySelector('.prev_slide').style.display = 'flex'
+        }else if(category_swiper.isStart){
+          document.querySelector('.prev_slide').style.display = 'none'
+          document.querySelector('.next_slide').style.display = 'flex' 
+        }
+        else{
+          document.querySelector('.next_slide').style.display = 'flex' 
+          document.querySelector('.prev_slide').style.display = 'flex'
         }
       });
     </script>
@@ -214,15 +114,3 @@
 </body>
 
 </html>
-
-
-<style>
-  .vote_box {
-    /* min-height: 90vh; */
-    width: 90%;
-    padding: 5vh 0;
-    /* overflow: hidden; */
-    /* padding: 5vh 5%; */
-
-  }
-</style>
