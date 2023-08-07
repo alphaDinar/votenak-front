@@ -1,3 +1,9 @@
+@media all and (max-width:400px) {
+  .ad_span {
+    position: revert;
+  }
+}
+
 form{
   gap: 1rem;
 }

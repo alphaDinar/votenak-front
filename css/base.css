@@ -25,6 +25,9 @@
 
 :root{
   --var-theme : #111b31;
+  --var-theme : salmon;
+  /* --var-theme : #42263c; */
+  /* --var-theme : rgb(54, 187, 240); */
 }
 
 .page {

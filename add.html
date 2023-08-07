@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/eb75260fb3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/ad.css">
+</head>
+
+<body>
+  <section class="page">
+    <section class="top_nav">
+      <h1 style="color: var(--var-theme);">BallotBox</h1>
+      <nav>
+        <a href="contact.html">Contact</a>
+        <a href="">About Us</a>
+        <a href="">Events</a>
+        <a href="contact.html" style="padding: 5px 10px; border-radius: 100px; color: white; background: var(--var-theme);">Get
+          Started</a>
+      </nav>
+    </section>
+    <section class="head_box">
+      <section class="left">
+        <h3>
+          Empower Your Voice with BallotBox
+        </h3>
+        <span>The ultimate school voting app that empowers you to have a voice and make a difference.</span>
+        <a href="contact.html">Get Started</a>
+      </section>
+      <section class="right">
+        <div class="top_egg egg" style="background-image: url(images/ama.jpg);">
+          <div class="ad_span">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div>Reliable</div>
+                </div>
+                <div class="swiper-slide">
+                  <div>Effifient</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="low_egg egg swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="background-image: url(images/denver2.JPG);"></div>
+              <div class="swiper-slide" style="background-image: url(images/face2.jpg);"></div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          document.querySelectorAll('.egg').forEach((el, i) => {
+            anime({
+              targets: el,
+              translateY: [-100, 0],
+              opacity: [0, 1],
+              delay: 400 * i
+            })
+          })
+
+          anime({
+            targets: '.ad_span',
+            translateY: [-100, 0],
+            opacity: [0, 1],
+            delay: 600
+          })
+        </script>
+
+        <script>
+          var ad_swiper = new Swiper('.ad_span .swiper', {
+            loop: true,
+            speed: 1000,
+            direction: 'vertical'
+          })
+        </script>
+        <script>
+          var low_egg_swiper = new Swiper('.low_egg', {
+            loop: true,
+            speed: 1000,
+            autoplay: {
+              delay: 4000
+            }
+          })
+
+          low_egg_swiper.on('slideChange', () => {
+            ad_swiper.slideNext()
+          })
+        </script>
+
+      </section>
+    </section>
+  </section>
+</body>
+</html>

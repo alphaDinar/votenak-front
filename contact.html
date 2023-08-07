@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/eb75260fb3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/ad.css">
+</head>
+
+<body>
+  <section class="page">
+    <section class="top_nav">
+      <a href="add.html">
+        <h1 style="color: var(--var-theme);">BallotBox</h1>
+      </a>
+      <nav>
+        <a href="">Contact</a>
+        <a href="">About Us</a>
+        <a href="" style="padding: 5px 10px; border-radius: 100px; color: white; background: var(--var-theme);">Get
+          Started</a>
+      </nav>
+    </section>
+    <section class="form_box">
+      <form method="post">
+        <small class="m_box">
+          Request a call to get in touch on a plan that best suites your elections.
+          You will receive feedback within 3 to 4 hours.   
+        </small>
+
+        <style>
+          .m_box{
+            background: rgb(254, 229, 226);
+            color: var(--var-theme);
+          }
+        </style>
+
+        <div>
+          <span>Institiution</span>
+          <input type="text">
+        </div>
+
+        <div>
+          <span>Contact</span>
+          <input type="tel">
+        </div>
+  
+        <div>
+          <span>Email</span>
+          <input type="email">
+        </div>
+  
+        <div>
+          <textarea placeholder="Extra notes"></textarea>
+        </div>
+
+        <button class="material-symbols-outlined">send</button>
+      </form>
+    </section>
+  </section>
+
+  <style>
+    .form_box{
+      /* padding: 10vh 0; */
+      padding: 1vh 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    form{
+      border: 1px solid darkgray;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem 0;
+      padding: 20px;
+    }
+    form div{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    input, textarea, .m_box{
+      border-radius: 5px;
+      padding: 10px 15px;
+      width: 230px;
+    }
+    @media all and (max-width:400px){
+      form{
+        width: 95%;
+        align-items: center;
+      }
+      form div{
+        align-items: center;
+        width: 100%;
+      }
+      input, textarea, .m_box{
+        width: 80%;
+        padding: 10px 5%;
+      }
+    }
+    input, textarea{
+      border: 1px solid darkgray;
+    }
+    textarea{
+      height: 100px;
+      resize: none;
+    }
+    form button{
+      background: var(--var-theme);
+      color: white;
+      width: 100px;
+      cursor: pointer;
+      border-radius: 100px;
+      padding: 10px 0;
+    }
+  </style>
+</body>
+
+</html>
